@@ -56,6 +56,7 @@ Alternatively you can build the image yourself.
 
 ```bash
 docker build -t sameersbn/skype github.com/sameersbn/docker-skype
+docker build -t elleryq/skype .
 ```
 
 With the image locally available, install the wrapper scripts using:
@@ -64,6 +65,9 @@ With the image locally available, install the wrapper scripts using:
 docker run -it --rm \
   --volume /usr/local/bin:/target \
   sameersbn/skype:latest install
+docker run -it --rm \
+  --volume /usr/local/bin:/target \
+  elleryq/skype:latest install
 ```
 
 This will install a wrapper script to launch `skype`.
