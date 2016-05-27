@@ -126,3 +126,8 @@ For debugging and maintenance purposes you may want access the containers shell.
 ```bash
 docker exec -it skype bash
 ```
+
+## References
+
+* http://jaredmarkell.com/docker-and-locales/
+* http://www.infoq.com/cn/articles/talk-about-docker-running-the-chinese-gui-software
