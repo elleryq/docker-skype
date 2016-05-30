@@ -6,6 +6,9 @@ ENV SKYPE_USER=skype
 ENV LANG zh_TW.UTF-8
 ENV LANGUAGE zh_TW:zh
 ENV LC_ALL zh_TW.UTF-8
+ENV XMODIFIERS=@im=gcin
+ENV GTK_IM_MODULE=gcin
+ENV QT_IM_MODULE=gcin
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv 7212620B \
  && echo "deb http://archive.canonical.com/ trusty partner" >> /etc/apt/sources.list \
@@ -23,6 +26,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv 7212620B \
 
 COPY scripts/ /var/cache/skype/
 COPY entrypoint.sh /sbin/entrypoint.sh
+EXPOSE 9999
 RUN chmod 755 /sbin/entrypoint.sh
 
 ENTRYPOINT ["/sbin/entrypoint.sh"]

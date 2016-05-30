@@ -47,6 +47,12 @@ prepare_docker_env_parameters() {
   ENV_VARS+=" --env=DISPLAY"
   ENV_VARS+=" --env=XAUTHORITY=${XAUTH}"
   ENV_VARS+=" --env=TZ=$(date +%Z)"
+  ENV_VARS+=" --env=XMODIFIERS=@im=gcin"
+  ENV_VARS+=" --env=GTK_IM_MODULE=gcin"
+  ENV_VARS+=" --env=QT_IM_MODULE=gcin"
+  ENV_VARS+=" --env=LANG=zh_TW.UTF-8"
+  ENV_VARS+=" --env=LANGUAGE=zh_TW:zh"
+  ENV_VARS+=" --env=LC_ALL=zh_TW.UTF-8"
 }
 
 prepare_docker_volume_parameters() {
